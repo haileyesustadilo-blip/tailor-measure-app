@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { Features } from "@/components/Features";
 import { OrderForm } from "@/components/OrderForm";
+import { ClothingDisplay } from "@/components/ClothingDisplay";
 
 const Index = () => {
   return (
@@ -16,6 +17,19 @@ const Index = () => {
       {/* Features Section */}
       <section id="services">
         <Features />
+      </section>
+      
+      {/* Clothing Collection */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Our Clothing Collection</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Discover our range of premium clothing options, each crafted with precision and attention to detail.
+            </p>
+          </div>
+          <ClothingDisplay />
+        </div>
       </section>
       
       {/* Order Form Section */}
