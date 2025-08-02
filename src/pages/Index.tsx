@@ -1,12 +1,50 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/Hero";
+import { Features } from "@/components/Features";
+import { OrderForm } from "@/components/OrderForm";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section id="home">
+        <Hero />
+      </section>
+      
+      {/* Features Section */}
+      <section id="services">
+        <Features />
+      </section>
+      
+      {/* Order Form Section */}
+      <section id="order" className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Place Your Custom Order</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Ready to experience bespoke tailoring? Fill out the form below to begin your custom clothing journey.
+            </p>
+          </div>
+          <div id="order-form">
+            <OrderForm />
+          </div>
+        </div>
+      </section>
+      
+      {/* Footer */}
+      <footer className="bg-primary text-primary-foreground py-12">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-2xl font-bold mb-4">Bespoke Tailors</h3>
+          <p className="text-primary-foreground/80 mb-4">
+            Crafting exceptional clothing since 1995
+          </p>
+          <p className="text-sm text-primary-foreground/60">
+            © 2024 Bespoke Tailors. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 };
